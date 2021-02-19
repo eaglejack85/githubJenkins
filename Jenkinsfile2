@@ -5,7 +5,7 @@ node {
     stage('List files') {
         sh 'ls -l'
     }
-    stage('send email' {
+    stage('send email') {
         mail bcc: '', body: 'Build has completed successfully', cc: '', from: '', replyTo: '', subject: 'SUCCESS: Build Completed', to: 'giacomo.falchetti@gmail.com'
     }
 }
