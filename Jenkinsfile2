@@ -1,0 +1,11 @@
+node {
+    stage('Clone repository') {
+        git branch: 'main', url: 'https://github.com/giacomofalchetti/githubJenkins.git'
+    }
+    stage('List files') {
+        sh 'ls -l'
+    }
+    stage('send email' {
+        mail bcc: '', body: 'Build has completed successfully', cc: '', from: '', replyTo: '', subject: 'SUCCESS: Build Completed', to: 'giacomo.falchetti@gmail.com'
+    }
+}
