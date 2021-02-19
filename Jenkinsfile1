@@ -1,0 +1,8 @@
+node {
+    stage('Clone repository') {
+        git branch: 'main', url: 'https://github.com/giacomofalchetti/githubJenkins.git'
+    }
+    stage('Print file') {
+        sh 'cat README.md'
+    }
+}
